@@ -27,14 +27,25 @@
     </header>
     
     <div class="w3-card-2 w3-panel w3-container w3-padding">
-            <h3>Parte 3</h3>
         
             <input type="text" placeholder="Digite um produto" id="produto" class="w3-input" />
             <input type="number" placeholder="Valor do produto" id="valor" step="any" class="w3-input"/>
+            <input type="number" placeholder="Quantidade do produto" id="quantidade" step="any" class="w3-input"/>
             <input type="submit" value="Adicionar" onclick="acrescentarProduto()"  class="w3-btn w3-blue w3-btn-block" />
         
         <p>Lista:</p>
-        <ul id="lista"></ul>
+        <table class="w3-table w3-striped w3-bordered">
+            <thead >
+                <tr class="w3-green">
+                    <th>Produto</th>
+                    <th>Valor</th>
+                    <th>Quantidade</th>
+                    <th>Apagar</th>
+                </tr>
+            </thead>
+            <tbody id="lista" onload="mostrar()">
+            </tbody>                
+        </table>
     </div>
 
     <script src="js/escript.js"></script>
